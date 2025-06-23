@@ -26,14 +26,16 @@ int main()
 
       std::transform(msg.begin(), msg.end(), msg.begin(), ::tolower); 
 
-      if (event.msg.content.find(copy_pasta) != std::string::npos || event.msg.content.find("!NO_COPY_PASTA!") != std::string::npos) {
+      std::size_t npos = std::string::npos
+
+      if (msg.find(copy_pasta) != npos || msg.find("!NO_COPY_PASTA!") != npos || msg.find("!NCP!") != npos) {
          return;
-      } else if(msg.find("gnu/linux") != std::string::npos) {
+      } else if(msg.find("gnu/linux") != npos) {
          return;
-      } else if (msg.find("linux") != std::string::npos) {
+      } else if (msg.find("linux") != npos) {
          removeCharacters(msg, "/");
          event.reply(copy_pasta, true);
-      } else if (msg.find("loonux") != std::string::npos) {
+      } else if (msg.find("loonux") != npos) {
          event.reply(":middle_finger:", true);
       } else if (msg==("grr")) {
          event.reply("https://tenor.com/view/how-bro-felt-after-writing-that-how-bro-felt-alpha-wolf-alpha-alpha-meme-gif-307456636039877895", true);
