@@ -26,7 +26,7 @@ int main()
 
       std::transform(msg.begin(), msg.end(), msg.begin(), ::tolower); 
 
-      std::size_t npos = std::string::npos
+      std::size_t npos = std::string::npos;
 
       if (msg.find(copy_pasta) != npos || msg.find("!NO_COPY_PASTA!") != npos || msg.find("!NCP!") != npos) {
          return;
