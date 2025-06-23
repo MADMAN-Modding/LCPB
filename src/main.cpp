@@ -26,7 +26,7 @@ int main()
 
       std::transform(msg.begin(), msg.end(), msg.begin(), ::tolower); 
 
-      if (event.msg.content.find(copy_pasta) != std::string::npos) {
+      if (event.msg.content.find(copy_pasta) != std::string::npos || event.msg.content.find("!NO_COPY_PASTA!") != std::string::npos) {
          return;
       } else if(msg.find("gnu/linux") != std::string::npos) {
          return;
