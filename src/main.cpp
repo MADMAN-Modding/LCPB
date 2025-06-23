@@ -28,7 +28,7 @@ int main()
 
       std::size_t npos = std::string::npos;
 
-      if (msg.find(copy_pasta) != npos || msg.find("!NO_COPY_PASTA!") != npos || msg.find("!NCP!") != npos) {
+      if (msg.find(copy_pasta) != npos || event.msg.content.find("!NO_COPY_PASTA!") != npos || event.msg.content.find("!NCP!") != npos) {
          return;
       } else if(msg.find("gnu/linux") != npos) {
          return;
