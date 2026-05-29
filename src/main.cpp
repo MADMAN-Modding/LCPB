@@ -59,7 +59,9 @@ int main()
          event.reply(":middle_finger:", true);
       } else if (msg==("grr")) {
          event.reply("https://tenor.com/view/how-bro-felt-after-writing-that-how-bro-felt-alpha-wolf-alpha-alpha-meme-gif-307456636039877895", true);
-      }
+      } else if (msg.find("freedy") != npos) {
+				 event.reply("https://media.discordapp.net/attachments/1417213833856024602/1509707696436412597/20260528_1954481.gif?ex=6a1a285b&is=6a18d6db&hm=1d3bf36ee06b43ef83f66b21104564c2e2b7cb644170e0891a0e3ddc9dce9af3&=&width=672&height=1194", true);
+			}
 
    });
 
